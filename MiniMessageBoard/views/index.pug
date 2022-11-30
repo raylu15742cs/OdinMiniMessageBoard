@@ -4,6 +4,6 @@ block content
   h1= title
   
     each message in messages
-      h1= message.user
+      h1= `Name: ${message.user}`
       p= message.text
-      p= message.added
+      p= `Date: ${message.added}`
