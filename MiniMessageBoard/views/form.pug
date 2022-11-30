@@ -2,9 +2,9 @@ extends layout
 
 block content 
     h1= title
-    form(action="/new" method="POST")
-    p Author Name:
-      input(type="text" name="username" placeholder="Enter Your Username ")
-    p Message:
-      input(type="password" name="password" placeholder="Enter Your Password ")
-    input(type="submit")
+    form(action='/new', method='POST')
+        label(for='user') Name:
+        input(type='text', name='user', id='user')
+        label(for='text') Message:
+        input(type='text', name='text', id='text')
+        input(type='submit', value='Submit')
