@@ -3,6 +3,7 @@ extends layout
 block content
   h1= title
   
-  ul
     each message in messages
-      li= message
+      h1= message.user
+      p= message.text
+      p= message.added
