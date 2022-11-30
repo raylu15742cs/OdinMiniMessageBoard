@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/new', function(req, res, next) {
   const { text, user } = req.body;
   messages.push({ text, user, added: new Date() });
   res.redirect('/');
