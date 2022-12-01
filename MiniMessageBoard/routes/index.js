@@ -5,12 +5,12 @@ const messages = [
   {
     text: 'Hi there!',
     user: 'Amando',
-    added: new Date(),
+    added: new Date().toDateString(),
   },
   {
     text: 'Hello World!',
     user: 'Charles',
-    added: new Date(),
+    added: new Date().toDateString(),
   },
 ];
 
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
   const { text, user } = req.body;
-  messages.push({ text, user, added: new Date() });
+  messages.push({ text, user, added: new Date().toDateString() });
   res.redirect('/');
 })
 module.exports = router;
