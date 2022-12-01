@@ -1,10 +1,12 @@
 extends layout
 
 block content
-  h1= title
+  .title
+    h1= title
   
-    each message in messages
+  each message in messages
+    .messagess
       h1= `Name: ${message.user}`
       p= message.text
       p= `Date: ${message.added}`
-  button(onclick="window.location.href='new'") form
+  button(onclick="window.location.href='new'") New Message
