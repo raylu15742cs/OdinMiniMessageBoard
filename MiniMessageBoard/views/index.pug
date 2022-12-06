@@ -6,7 +6,8 @@ block content
   
   each message in messages
     .messagess
-      h1= `Name: ${message.user}`
+      h1= message.topic
       p= `Message: ${message.text}`
+      h3= `from: ${message.user}`
       p= `Posted: ${message.added}`
   button(onclick="window.location.href='new'") New Message
