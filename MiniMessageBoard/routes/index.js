@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-  const { text, user } = req.body;
+  const { text, topic, user } = req.body;
   messages.push({ text,topic, user, added: new Date().toDateString() });
   res.redirect('/');
 })
